@@ -45,21 +45,3 @@ No analytics, tracking scripts, or external JavaScript libraries are included. F
 - **LinkedIn pending**: `https://www.linkedin.com/notifications/` is not a public profile URL. Replace the placeholder note on the homepage with your actual public URL (usually `https://www.linkedin.com/in/your-handle/`).
 
 Note: This is a public website. The CV contains an email address and other professional details; review before publishing.
-
-
-## Additional research assets (October 2026)
-
-- `assets/figures/gan-svoct-coagulation-poster.png`: original SvOCT GAN poster (user-supplied).
-- `assets/figures/cbct-radiotherapy-framework.png`: proposed CT/CBCT-to-dose analysis diagram (user-supplied).
-- `research/radiotherapy.html`: proposed radiotherapy segmentation and dosimetric evaluation framework.
-
-The radiotherapy workflow diagram is conceptual and does not establish clinical validation. Review figure-sharing permissions and remove any sensitive patient data before publishing.
-
-
-## v4 research presentation updates
-
-- Click-to-enlarge lightbox for project figures (keyboard Enter/Space and Escape supported).
-- Dedicated `presentations/index.html` poster gallery with downloadable original images.
-- Expanded methodology and research status sections on all five project pages.
-- All original project images, CV and professional links retained.
-- No clinical validation claims are implied by illustrative radiotherapy workflows.
