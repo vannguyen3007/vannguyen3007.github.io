@@ -9,3 +9,52 @@
 .v6-note{font-size:12px!important;color:#6b7e84!important;font-style:italic}.v6-secondary{display:flex;gap:12px;flex-wrap:wrap;margin-top:17px}.v6-secondary a{border:1px solid #d9e9e6;border-radius:999px;padding:10px 15px;background:#fff;font-size:13px;font-weight:700;color:#087f7b}.v6-secondary a:hover{background:#eaf6f4}
 #medical-showcase,#genomics-showcase{padding:28px}#medical-showcase .highlight-visual,#genomics-showcase .highlight-visual{height:240px}#medical-showcase .highlight-visual img,#genomics-showcase .highlight-visual img{object-fit:contain;background:#fff}#genomics-showcase{background:linear-gradient(130deg,#f0faf6,#fff 75%)}
 @media(max-width:620px){#medical-showcase,#genomics-showcase{padding:17px}.v6-secondary{flex-direction:column}.v6-secondary a{text-align:center}}
+
+/* V7: preserve original research images, keep research areas separated */
+.research-showcases{display:grid;gap:28px}
+.research-showcases .focus-panel{scroll-margin-top:96px}
+.research-showcases .highlight-card{grid-template-columns:190px minmax(0,1fr) minmax(180px,24%);align-items:center}
+.research-showcases .highlight-visual{height:185px;display:flex;align-items:center;justify-content:center;background:transparent}
+.research-showcases .highlight-visual img{width:100%;height:100%;object-fit:contain;object-position:center;border-radius:12px}
+.research-showcases .highlight-main h3{margin-top:8px}
+.research-showcases .focus-heading{border-bottom:1px solid rgba(130,160,160,.22);padding-bottom:18px}
+@media(max-width:900px){.research-showcases .highlight-card{grid-template-columns:150px minmax(0,1fr)}.research-showcases .highlight-side{grid-column:1/-1}}
+@media(max-width:620px){.research-showcases .highlight-card{grid-template-columns:1fr}.research-showcases .highlight-visual{height:200px;max-width:260px}.research-showcases .highlight-side{grid-column:auto}}
+\n/* v8: black research portfolio, original scientific poster assets retained */
+:root{--navy:#080a0b;--teal:#38dba4;--mint:#69e7bd;--paper:#08090a;--ink:#f4f7f7;--muted:#a6b4ba;--line:#303638}
+html{background:#000}body{background:#000!important;color:#f5f6f7!important}
+.top,.footer{background:#050607!important}.section,.section.alt{background:#000!important}
+.section .intro,.section p,.intro,.smallnote{color:#a9b6bb}
+.kicker,.tag,.pillar .num,.arrow,.links{color:#42dda8!important}
+a:hover{color:#70f5c8}.pillar,.pillar-enhanced,.experience-card,.project,.notice,.mini-projects a{background:#090c0d!important;border-color:#303739!important;color:#f3f5f5!important;box-shadow:none!important}
+.pillar-enhanced:first-child{background:#0b1715!important}.pillar p,.experience-card p,.project p,.mini-projects p{color:#aab6bc!important}
+.project img{background:#101314}.notice{border-left-color:#3cdb9e}
+.btn{border-color:#475854;color:#e8f5f0}.btn.primary{background:#35c995;border-color:#35c995;color:#06130e}.btn:hover{background:#34dba4;color:#07120e}
+.research-showcases{gap:34px;margin-top:38px}.research-showcases .focus-panel{background:#000!important;border:0!important;padding:0!important;border-radius:0;box-shadow:none!important}
+.research-showcases .focus-heading{padding:0 0 14px;border-bottom:0!important;margin-bottom:10px}
+.research-showcases .focus-heading h2{font-size:clamp(24px,2.7vw,32px);color:#f5f6f6}
+.research-showcases .focus-heading p{color:#a9b6bc}
+.research-showcases .highlight-list.v8-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.research-showcases .v8-card{display:grid!important;grid-template-columns:minmax(0,46%) minmax(0,1fr)!important;gap:20px!important;align-items:stretch!important;background:#090b0c!important;border:1px solid #303638!important;border-radius:18px!important;padding:13px!important;box-shadow:none!important;min-height:245px;overflow:hidden;transition:transform .2s,border-color .2s}
+.research-showcases .v8-card:hover{transform:translateY(-3px);border-color:#438e77!important}
+.research-showcases .v8-card .highlight-visual{height:100%!important;min-height:220px;max-width:none!important;display:block!important;background:#101416!important;border-radius:13px!important;overflow:hidden}
+.research-showcases .v8-card .highlight-visual img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;border-radius:0!important}
+.research-showcases .v8-card .highlight-main{display:flex;flex-direction:column;min-width:0;padding:8px 3px 5px 0}
+.research-showcases .v8-card .highlight-main h3{font-size:clamp(16px,1.35vw,21px);line-height:1.32;margin:6px 0 9px;color:#f5f7f7}
+.research-showcases .v8-card .highlight-main p{font-size:13px;line-height:1.55;color:#aeb9bd!important;margin:8px 0}
+.research-showcases .v8-card .tag-row span{background:#101d1a;color:#69dcb4;border:1px solid #244339;font-size:10px;padding:3px 7px}
+.research-showcases .v8-card .tag-row span:nth-child(3n){background:#121c22;color:#a1c5d7}
+.research-showcases .v8-card .index-pill{background:#103126;color:#67efba;font-size:11px;padding:5px 8px}
+.research-showcases .v8-card .metrics{margin-top:9px;gap:7px}
+.research-showcases .v8-card .metrics div{background:#101715;border:1px solid #263a33;border-radius:999px;padding:5px 11px;min-width:0;display:flex;align-items:center;gap:7px}
+.research-showcases .v8-card .metrics small{color:#a9b9b3;font-size:10px}.research-showcases .v8-card .metrics strong{color:#6ee3b7;font-size:13px}
+.research-showcases .v8-card .highlight-actions{margin-top:auto;padding-top:12px;gap:8px}
+.research-showcases .v8-card .highlight-actions a{border-color:#2f4840!important;color:#c9f8e6!important;background:#101713!important;border-radius:9px}
+.research-showcases .v8-card .highlight-actions a:hover{background:#1d4838!important}
+.research-showcases .v8-genomics .highlight-list.v8-card-grid{grid-template-columns:1fr}
+.research-showcases .v8-genomics .v8-card{grid-template-columns:minmax(0,55%) minmax(0,1fr)!important;min-height:255px}
+.research-showcases .v8-genomics .v8-card .highlight-visual img{object-fit:contain!important;background:#fff}
+.mini-projects a>div{background:#090c0d}.mini-projects span{color:#57e7b0}
+.v6-secondary a{background:#0d1412;border-color:#254c3c;color:#74e5b8}.v6-note{color:#99a7ac!important}
+@media(max-width:900px){.research-showcases .highlight-list.v8-card-grid{grid-template-columns:1fr}.research-showcases .v8-genomics .v8-card{grid-template-columns:minmax(0,46%) minmax(0,1fr)!important}}
+@media(max-width:620px){.research-showcases .v8-card,.research-showcases .v8-genomics .v8-card{grid-template-columns:1fr!important}.research-showcases .v8-card .highlight-visual{height:220px!important;min-height:220px}.research-showcases .v8-card .highlight-main{padding:8px}.research-showcases .focus-heading h2{font-size:25px}}
