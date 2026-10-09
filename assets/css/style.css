@@ -58,9 +58,3 @@ a:hover{color:#70f5c8}.pillar,.pillar-enhanced,.experience-card,.project,.notice
 .v6-secondary a{background:#0d1412;border-color:#254c3c;color:#74e5b8}.v6-note{color:#99a7ac!important}
 @media(max-width:900px){.research-showcases .highlight-list.v8-card-grid{grid-template-columns:1fr}.research-showcases .v8-genomics .v8-card{grid-template-columns:minmax(0,46%) minmax(0,1fr)!important}}
 @media(max-width:620px){.research-showcases .v8-card,.research-showcases .v8-genomics .v8-card{grid-template-columns:1fr!important}.research-showcases .v8-card .highlight-visual{height:220px!important;min-height:220px}.research-showcases .v8-card .highlight-main{padding:8px}.research-showcases .focus-heading h2{font-size:25px}}
-
-/* V8 Black Edition — background override */
-html, body {
-  background: #000000 !important;
-  color: #f5f5f5;
-}
