@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CBCT-guided adaptive radiotherapy for rectal cancer — Van Nguyen</title>
+  <meta name="description" content="Methods that register and contour daily cone-beam CT reliably, and flag when the result should not be trusted.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='13' fill='none' stroke='%232fa6d8' stroke-width='2'/><circle cx='16' cy='16' r='8' fill='none' stroke='%23f0a83c' stroke-width='2'/><circle cx='16' cy='16' r='3' fill='%23e8553f'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ===== HEADER (copy of the home page header with ../ paths) ===== -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Van Nguyen</a>
+    <nav class="nav" aria-label="Main">
+      <a href="../index.html#research" aria-current="page">Research</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#education">Education</a>
+      <a href="../index.html#contact">Contact</a>
+      <a href="../cv/Van_Nguyen_CV.pdf" target="_blank" rel="noopener">CV</a>
+    </nav>
+    <div style="display:flex;gap:8px">
+      <button class="icon-btn" data-theme-toggle aria-label="Switch theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" data-menu-toggle aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <!-- ===== PAGE HEADING: title, one-sentence summary, key facts ===== -->
+  <div class="wrap page-head">
+    <a class="crumb" href="../index.html#research">← All research</a>
+    <h1>CBCT-guided adaptive radiotherapy for rectal cancer</h1>
+    <p class="lede">Methods that register and contour daily cone-beam CT reliably, and flag when the result should not be trusted.</p>
+    <dl class="facts">
+      <div><dt>Status</dt><dd><span class="status is-active">In progress, since Mar 2026</span></dd></div>
+      <div><dt>Collaborators</dt><dd><a href="https://sites.google.com/view/drduongthanhtai/" target="_blank" rel="noopener">Dr. Duong Thanh Tai</a> (Spencer Hospital), Dr. Dat Tran (Louisiana State University)</dd></div>
+      <div><dt>Methods</dt><dd>Optimal transport, conformal prediction, deep learning</dd></div>
+    </dl>
+  </div>
+
+  <!-- ===== BODY: table of contents on the left, write-up on the right ===== -->
+  <div class="wrap article">
+    <nav class="toc" aria-label="On this page"><ol>
+      <li><a href="#problem">The problem</a></li>
+      <li><a href="#registration">Gas-aware registration</a></li>
+      <li><a href="#segmentation">Risk-controlled segmentation</a></li>
+      <li><a href="#dose">Dose-aware evaluation</a></li>
+      <li><a href="#data">Data and evaluation</a></li>
+    </ol></nav>
+    <div class="prose">
+      <h2 id="problem">The problem</h2>
+      <p>In adaptive radiotherapy, a cone-beam CT (CBCT) is taken before each treatment fraction and compared with the planning CT. For rectal cancer this comparison is hard: rectal gas appears and disappears, the bladder fills to different volumes, and CBCT has lower contrast and more artifacts than CT.</p>
+      <p>Two steps suffer most. Deformable registration assumes every voxel in one scan maps to a voxel in the other, which is false when gas is created or removed. Auto-contouring gives no reliable signal of when it has failed, so physicians must re-check every structure while the patient waits on the couch.</p>
+      <h2 id="registration">Gas-aware registration</h2>
+      <p>I model the daily anatomy as a smooth deformation of the planning CT <em>plus</em> a source term that can create or remove mass in gas and bladder regions.</p>
+      <ul>
+        <li>The deformation is diffeomorphic (stationary velocity fields), so it cannot fold or tear tissue.</li>
+        <li>The source term is penalized with a <strong>Wasserstein–Fisher–Rao</strong> (unbalanced optimal transport) cost, weighted lower inside a predicted gas mask.</li>
+        <li>A network predicts both fields in one pass, trained without ground-truth deformations, and is benchmarked against VoxelMorph, TransMorph and B-spline registration.</li>
+      </ul>
+      <div class="math">min<sub>v, s</sub> &nbsp; Sim(CT ∘ φ<sub>v</sub> + s, CBCT) + λ‖v‖<sup>2</sup><sub>V</sub> + μ · WFR<sub>w</sub>(s)</div>
+      <h2 id="segmentation">Risk-controlled segmentation</h2>
+      <p>I wrap segmentation models (Swin UNETR and Bayesian deep ensembles) in <strong>conformal risk control</strong>. Instead of a single contour, each structure gets an inner and outer band with a finite-sample guarantee, for example on the expected volume of CTV missed.</p>
+      <ul>
+        <li><strong>Mondrian conformal prediction</strong> keeps the guarantee within subgroups: per structure, per slice region and by gas presence.</li>
+        <li><strong>Weighted conformal prediction</strong> handles distribution shift between planning CT and CBCT, and between scanners.</li>
+        <li>Calibration is done at the patient level, since fractions from the same patient are not independent.</li>
+        <li>Wide bands flag the contours that a radiation oncologist should review first.</li>
+      </ul>
+      <h2 id="dose">Dose-aware evaluation</h2>
+      <p>Geometric scores like Dice do not say whether an error matters clinically. Neural dose surrogates, bilevel optimization and a differentiable DVH loss are used to estimate how residual registration and segmentation errors change the delivered dose.</p>
+      <figure>
+        <a class="plate" href="../assets/figures/ct-cbct-workflow.png" target="_blank" rel="noopener" aria-label="Open figure at full size">
+          <img src="../assets/figures/thumbs/ct-cbct-workflow.webp" alt="Workflow: contours, CT/CBCT segmentation and dose grids are mapped to one coordinate system, compared with dose-volume histograms, and tracked across fractions." loading="lazy">
+        </a>
+        <figcaption>Evaluation framework: contours and predictions are mapped onto the RTDOSE grid, compared through DVH metrics and followed across CBCT fractions. Click to open full size.</figcaption>
+      </figure>
+      <h2 id="data">Data and evaluation</h2>
+      <ul>
+        <li>Public data: SynthRAD2025 and COBRA2026 pelvic CT/CBCT, plus institutional rectal cases with expert contours and dose records, subject to availability.</li>
+        <li>Registration metrics: Dice and HD95 of propagated contours, Jacobian folding, dose-accumulation error, stratified by gas volume.</li>
+        <li>Segmentation metrics: empirical coverage against target, band width, and how well band width flags failed contours.</li>
+      </ul>
+      <p class="note">This is ongoing research. No clinical validation is implied, and results will be added once they are verified.</p>
+      <nav class="next-prev" aria-label="More projects">
+        <span></span>
+        <a href="perturbation.html">Sample size for single-cell perturbation screens →</a>
+      </nav>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Van Nguyen &nbsp; <a href="https://vannguyen3007.github.io">vannguyen3007.github.io</a></span>
+    <span><a href="https://github.com/vannguyen3007" target="_blank" rel="noopener">GitHub</a> &nbsp; <a href="https://www.linkedin.com/in/van-nguyen-b05455b2/" target="_blank" rel="noopener">LinkedIn</a> &nbsp; <a href="https://medium.com/@vannguyen-8073" target="_blank" rel="noopener">Medium</a></span>
+  </div>
+</footer>
+</body>
+</html>
