@@ -1,2 +1,91 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Van Nguyen — AI medical imaging, computational biomedical research and bioinformatics."><title>Liver Tumor Detection &amp; Multimodal Imaging | Van Nguyen</title><link rel="stylesheet" href="../assets/css/style.css">
-<link rel="stylesheet" href="../assets/css/v9-black.css?v=9"></head><body><header class="top"><div class="container nav"><a class="brand" href="../index.html">VAN NGUYEN<span> / RESEARCH</span></a><nav class="navlinks"><a href="../index.html#about">About</a><a href="../index.html#research">Research</a><a href="../index.html#presentations">Presentations</a><a href="../index.html#life">Research Life</a><a href="../index.html#contact">Contact</a></nav></div></header><main class="container detail"><a class="arrow" href="../index.html#research">← All research projects</a><p class="kicker">Research project</p><h1>Liver Tumor Detection & Multimodal Imaging</h1><p class="lead">Exploring liver tumor identification using multimodal medical imaging.</p><h2>Research motivation</h2><p>Multimodal integration and variation in image characteristics motivate work on data fusion and regularization.</p><h2>Approach & scope</h2><p>The portfolio describes CT, MRI and PET imaging for differentiating liver lesions, with segmentation and object detection methods.</p><img src="../assets/figures/research-page-7.png" alt="Source research material for Liver Tumor Detection &amp; Multimodal Imaging" loading="lazy"><div class="notice">This page summarizes documented research experience or a developing project. Numerical performance claims, publication details and dataset access are not provided without verification.</div><p class="smallnote">Source: Research Experience – Van Nguyen (supplied portfolio). Images reproduced from the original portfolio.</p></main><footer class="footer"><div class="container"><span>© Van Nguyen · Computational Biomedical Research</span><span><a href="https://github.com/vannguyen3007" target="_blank" rel="noopener">GitHub ↗</a></span></div></footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Liver tumor detection with multimodal imaging — Van Nguyen</title>
+  <meta name="description" content="Combining CT, MRI and PET to detect and segment liver lesions.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='13' fill='none' stroke='%232fa6d8' stroke-width='2'/><circle cx='16' cy='16' r='8' fill='none' stroke='%23f0a83c' stroke-width='2'/><circle cx='16' cy='16' r='3' fill='%23e8553f'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ===== HEADER (copy of the home page header with ../ paths) ===== -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Van Nguyen</a>
+    <nav class="nav" aria-label="Main">
+      <a href="../index.html#research" aria-current="page">Research</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#education">Education</a>
+      <a href="../index.html#contact">Contact</a>
+      <a href="../cv/Van_Nguyen_CV.pdf" target="_blank" rel="noopener">CV</a>
+    </nav>
+    <div style="display:flex;gap:8px">
+      <button class="icon-btn" data-theme-toggle aria-label="Switch theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" data-menu-toggle aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <!-- ===== PAGE HEADING: title, one-sentence summary, key facts ===== -->
+  <div class="wrap page-head">
+    <a class="crumb" href="../index.html#research">← All research</a>
+    <h1>Liver tumor detection with multimodal imaging</h1>
+    <p class="lede">Combining CT, MRI and PET to detect and segment liver lesions.</p>
+    <dl class="facts">
+      <div><dt>Period</dt><dd>2021 – 2023</dd></div>
+      <div><dt>Where</dt><dd>BIEL Lab, Chonnam National University Hwasun Hospital</dd></div>
+      <div><dt>Slides</dt><dd><a href="https://docs.google.com/presentation/d/1W2_aNvQuWkutIaMNePQhV2FhBX6daD3R/edit" target="_blank" rel="noopener">Google Slides</a></dd></div>
+    </dl>
+  </div>
+
+  <!-- ===== BODY: table of contents on the left, write-up on the right ===== -->
+  <div class="wrap article">
+    <nav class="toc" aria-label="On this page"><ol>
+      <li><a href="#problem">The problem</a></li>
+      <li><a href="#approach">Approach</a></li>
+    </ol></nav>
+    <div class="prose">
+      <h2 id="problem">The problem</h2>
+      <p>Each modality sees liver lesions differently: CT and MRI show anatomy, PET shows metabolism. Combining them can separate lesion types better than one modality alone, but the images differ in resolution and contrast.</p>
+      <h2 id="approach">Approach</h2>
+      <ul>
+        <li>CT, MRI, ¹⁸F-FDG PET and ¹¹C-acetate PET for lesion characterization.</li>
+        <li>Segmentation and object detection models for lesion localization.</li>
+        <li>Fusion of anatomical and metabolic information, with regularization to handle differences between modalities.</li>
+      </ul>
+      <figure>
+        <a class="plate" href="../assets/figures/research-page-7.png" target="_blank" rel="noopener" aria-label="Open figure at full size">
+          <img src="../assets/figures/thumbs/research-page-7.webp" alt="Liver tumor imaging slide comparing CT, MRI and PET." loading="lazy">
+        </a>
+        <figcaption>Multimodal liver imaging overview. Click to open full size.</figcaption>
+      </figure>
+      <nav class="next-prev" aria-label="More projects">
+        <a href="bone.html">← Bone lesion and metastatic tumor detection</a>
+        <a href="../index.html#research">All research →</a>
+      </nav>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Van Nguyen &nbsp; <a href="https://vannguyen3007.github.io">vannguyen3007.github.io</a></span>
+    <span><a href="https://github.com/vannguyen3007" target="_blank" rel="noopener">GitHub</a> &nbsp; <a href="https://www.linkedin.com/in/van-nguyen-b05455b2/" target="_blank" rel="noopener">LinkedIn</a> &nbsp; <a href="https://medium.com/@vannguyen-8073" target="_blank" rel="noopener">Medium</a></span>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sample size for single-cell perturbation screens — Van Nguyen</title>
+  <meta name="description" content="Closed-form formulas for how many cells are needed to estimate a drug's perturbation direction to a given precision.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='13' fill='none' stroke='%232fa6d8' stroke-width='2'/><circle cx='16' cy='16' r='8' fill='none' stroke='%23f0a83c' stroke-width='2'/><circle cx='16' cy='16' r='3' fill='%23e8553f'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ===== HEADER (copy of the home page header with ../ paths) ===== -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Van Nguyen</a>
+    <nav class="nav" aria-label="Main">
+      <a href="../index.html#research" aria-current="page">Research</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#education">Education</a>
+      <a href="../index.html#contact">Contact</a>
+      <a href="../cv/Van_Nguyen_CV.pdf" target="_blank" rel="noopener">CV</a>
+    </nav>
+    <div style="display:flex;gap:8px">
+      <button class="icon-btn" data-theme-toggle aria-label="Switch theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" data-menu-toggle aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <!-- ===== PAGE HEADING: title, one-sentence summary, key facts ===== -->
+  <div class="wrap page-head">
+    <a class="crumb" href="../index.html#research">← All research</a>
+    <h1>Sample size for single-cell perturbation screens</h1>
+    <p class="lede">Closed-form formulas for how many cells are needed to estimate a drug's perturbation direction to a given precision.</p>
+    <dl class="facts">
+      <div><dt>Status</dt><dd><span class="status">Under review, <em>Biostatistics</em></span></dd></div>
+      <div><dt>Period</dt><dd>Feb – Oct 2026</dd></div>
+      <div><dt>Methods</dt><dd>Delta method, asymptotic variance, covariance propagation</dd></div>
+    </dl>
+  </div>
+
+  <!-- ===== BODY: table of contents on the left, write-up on the right ===== -->
+  <div class="wrap article">
+    <nav class="toc" aria-label="On this page"><ol>
+      <li><a href="#problem">The problem</a></li>
+      <li><a href="#approach">Approach</a></li>
+      <li><a href="#paper">Manuscript</a></li>
+    </ol></nav>
+    <div class="prose">
+      <h2 id="problem">The problem</h2>
+      <p>Single-cell perturbation screens measure how a drug or genetic perturbation shifts a cell's expression profile. Often the quantity of interest is the <em>direction</em> of that shift in a low-dimensional space, not its size. Biological and technical noise make that direction uncertain, and experimenters need to know how many cells to sequence before running the screen.</p>
+      <h2 id="approach">Approach</h2>
+      <p>The direction is a smooth function of the mean shift, so its uncertainty can be approximated with the multivariate delta method:</p>
+      <div class="math">Var(θ̂) ≈ ∇g(μ)<sup>⊤</sup> Σ ∇g(μ) / n</div>
+      <ul>
+        <li>A first-order Taylor expansion links the covariance of the mean shift to the variance of the estimated direction.</li>
+        <li>Inverting that relation gives a closed-form sample size for a target precision, driven by the signal-to-noise ratio of the perturbation.</li>
+        <li>Simulations check how biological and technical noise affect directional precision and drug-response signals.</li>
+      </ul>
+      <h2 id="paper">Manuscript</h2>
+      <p><em>“Closed-form sample size calculation for estimating perturbation directions in single-cell screens.”</em> Under review at <em>Biostatistics</em>. A link will be added when it is published.</p>
+      <nav class="next-prev" aria-label="More projects">
+        <a href="radiotherapy.html">← CBCT-guided adaptive radiotherapy for rectal cancer</a>
+        <a href="genomics.html">Black Soldier Fly genomic diversity pipeline →</a>
+      </nav>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Van Nguyen &nbsp; <a href="https://vannguyen3007.github.io">vannguyen3007.github.io</a></span>
+    <span><a href="https://github.com/vannguyen3007" target="_blank" rel="noopener">GitHub</a> &nbsp; <a href="https://www.linkedin.com/in/van-nguyen-b05455b2/" target="_blank" rel="noopener">LinkedIn</a> &nbsp; <a href="https://medium.com/@vannguyen-8073" target="_blank" rel="noopener">Medium</a></span>
+  </div>
+</footer>
+</body>
+</html>

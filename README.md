@@ -1,47 +1,79 @@
-# Van Nguyen — Academic Research Website
+# Van Nguyen — research website
 
-A responsive GitHub Pages portfolio focused on biomedical imaging, deep learning and computational genomics.
+Live at **https://vannguyen3007.github.io**
 
-## Publish
+A plain HTML/CSS/JS site for GitHub Pages: no build step and no frameworks.
+Edit a file, commit, push, and the site updates in a minute or two.
 
-1. Create a **public** GitHub repository named `vannguyen3007.github.io`.
-2. Upload the **contents** of this folder to the root of the repository (including `index.html`, `assets/`, `research/` and `.nojekyll`).
-3. In GitHub **Settings → Pages**, select **Deploy from a branch**, branch `main`, folder `/ (root)`, and save.
-4. Open `https://vannguyen3007.github.io` once Pages finishes publishing.
+## Project structure
 
-### Terminal commands (run inside this folder)
-
-```bash
-git init
-git add .
-git commit -m "Launch academic research website"
-git branch -M main
-git remote add origin https://github.com/vannguyen3007/vannguyen3007.github.io.git
-git push -u origin main
+```
+.
+├── index.html                 Home page (hero, latest news, research, experience, education, contact)
+├── research/
+│   ├── radiotherapy.html      CBCT-guided adaptive radiotherapy (current project)
+│   ├── perturbation.html      Single-cell perturbation sample size (under review)
+│   ├── genomics.html          Black Soldier Fly genomic diversity pipeline
+│   ├── svoct.html             GAN-based SvOCT coagulation monitoring
+│   ├── bone.html              Bone lesion and tumor detection
+│   ├── liver.html             Liver tumor multimodal imaging
+│   └── _template.html         Blank project page; copy this for new projects
+├── assets/
+│   ├── css/main.css           All styles; colors and fonts are at the top
+│   ├── js/main.js             Theme toggle, mobile menu, research filter, hero animation
+│   └── figures/               Full-size figures (open when clicked)
+│       └── thumbs/            Smaller .webp copies shown on the pages
+├── cv/Van_Nguyen_CV.pdf       Replace this file to update your CV
+├── tools/make_thumbs.py       Regenerates thumbs/ from the full-size figures
+└── .nojekyll                  Tells GitHub Pages to serve files as-is
 ```
 
-Create the GitHub repository first. If an existing Git repository has a different remote, check `git remote -v` rather than blindly adding a second `origin`.
+## Common edits
 
-## Customize before sharing
+| I want to… | Edit |
+|---|---|
+| Add a news item | `index.html`, section `NEWS`. Add a new `<li>` at the **top** of the list. |
+| Update my CV | Replace `cv/Van_Nguyen_CV.pdf` (keep the same file name). |
+| Add a job | `index.html`, section `EXPERIENCE`. Copy one `<li>` in the timeline. |
+| Change colors or fonts | `assets/css/main.css`, section 1 "Design tokens". |
+| Edit a project write-up | The matching file in `research/`. |
 
-- Add professional email, ORCID, Google Scholar, and verified CV link.
-- Replace illustrative DNA emoji hero with a personal scientific graphic if desired.
-- Add complete publication citations, conference names, years, and validated results.
-- Check permission to publish any figures or images included in the source PDF.
-- Confirm descriptions of ongoing genomics work and add validated outputs as available.
+## Add a new research project
 
-## Provenance
+1. **Figure.** Put the image in `assets/figures/` (e.g. `my-project.png`), then run
+   `python3 tools/make_thumbs.py` to create `assets/figures/thumbs/my-project.webp`.
+2. **Page.** Copy `research/_template.html` to `research/my-project.html`.
+   Delete the first comment line and fill in the title, summary, facts and sections.
+   Replace `FIGURE-NAME` with `my-project`. Each `<h2 id="...">` needs a matching
+   link in the table of contents (`<nav class="toc">`).
+3. **Card on the home page.** In `index.html`, section `RESEARCH`, copy one
+   `<article class="project">` block and change the link, image, text and tags.
+   Set `data-topics` to one or more of `imaging stats genomics optics`, so the filter buttons work.
+   To add a new topic, also add a `<button data-filter="newtopic">` in the filters row.
+4. **Links between projects.** Update the previous/next links at the bottom
+   of the neighboring project pages (`<nav class="next-prev">`).
 
-Research images are exported from the user-provided `Research Experience_Van Ngyen.pdf`: pages 3–8. Descriptions of SvOCT and tumor-imaging research follow that document. The BSF genomics project is a separate ongoing work and not claimed as content of the PDF.
+## Preview locally
 
-No analytics, tracking scripts, or external JavaScript libraries are included. Fonts load from Google Fonts and fall back to system fonts.
+```bash
+python3 -m http.server 8000
+# open http://localhost:8000
+```
 
+## Deploy
 
-## Profile links and CV (updated)
-- CV: `cv/Van_Nguyen_CV.pdf` (copied from uploaded Resume_27.pdf)
-- GitHub: https://github.com/vannguyen3007
-- Medium: https://medium.com/@vannguyen-8073
-- Contact: vannguyen300793@gmail.com (from uploaded CV)
-- **LinkedIn pending**: `https://www.linkedin.com/notifications/` is not a public profile URL. Replace the placeholder note on the homepage with your actual public URL (usually `https://www.linkedin.com/in/your-handle/`).
+```bash
+git add .
+git commit -m "Update site"
+git push
+```
 
-Note: This is a public website. The CV contains an email address and other professional details; review before publishing.
+GitHub Pages serves the `main` branch root (Settings → Pages).
+
+## Design notes
+
+- Dark "reading room" theme by default, with a light theme toggle that is remembered per visitor.
+- The hero draws isodose-style contour lines (marching squares over a field of
+  drifting Gaussian sources). It pauses when off-screen and shows a still frame
+  for visitors who prefer reduced motion. Tune it in `assets/js/main.js`, section 4.
+- Figures sit on light "lightbox" plates so slide-style images read well on the dark background.

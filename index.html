@@ -1,11 +1,367 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Van Nguyen — Medical imaging, statistics and genomics research</title>
+  <meta name="description" content="Van Nguyen builds mathematical and deep learning methods for CBCT-guided radiotherapy, medical imaging, single-cell statistics and genomics.">
+  <meta property="og:title" content="Van Nguyen — Research">
+  <meta property="og:description" content="Mathematical and deep learning methods for medical imaging, radiotherapy and genomics.">
+  <meta property="og:image" content="assets/figures/thumbs/ct-cbct-workflow.webp">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='13' fill='none' stroke='%232fa6d8' stroke-width='2'/><circle cx='16' cy='16' r='8' fill='none' stroke='%23f0a83c' stroke-width='2'/><circle cx='16' cy='16' r='3' fill='%23e8553f'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <!-- Apply a saved theme before first paint (avoids a flash) -->
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
 
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="Van Nguyen — AI medical imaging, computational biomedical research and bioinformatics." name="description"/><title>Computational Biomedical Research | Van Nguyen</title><link href="assets/css/style.css" rel="stylesheet"/>
-<link rel="stylesheet" href="assets/css/v9-black.css?v=9"></head><body><header class="top"><div class="container nav"><a class="brand" href="index.html">VAN NGUYEN<span> / RESEARCH</span></a><nav class="navlinks"><a href="index.html#about">About</a><a href="index.html#research">Research</a><a href="index.html#presentations">Presentations</a><a href="index.html#life">Research Life</a><a href="index.html#contact">Contact</a><a href="cv/Van_Nguyen_CV.pdf" rel="noopener" target="_blank">CV</a><a href="https://medium.com/@vannguyen-8073">Medium</a></nav></div></header><div class="top"><div class="container hero"><div><div class="eyebrow">AI Medical Imaging · Computational Genomics</div><h1>Van <span>Nguyen.</span></h1><p>Exploring biological systems through medical imaging, deep learning and computational data analysis.</p><div class="buttons"><a class="btn primary" href="#research">Explore research ↗</a><a class="btn" href="https://github.com/vannguyen3007" rel="noopener" target="_blank">GitHub profile ↗</a><a class="btn" href="cv/Van_Nguyen_CV.pdf" rel="noopener" target="_blank">Download CV ↗</a><a class="btn" href="https://medium.com/@vannguyen-8073" rel="noopener" target="_blank">Medium ↗</a></div></div><div aria-hidden="true" class="hero-art"><div class="orbit"></div><div class="dna">🧬</div></div></div></div><section class="section" id="about"><div class="container"><span class="kicker">01 / About</span><h2>Research at the intersection of biology and computation.</h2><p class="intro">I am a computational biomedical researcher with experience in deep learning for optical coherence tomography, bone and liver tumor imaging, and multimodal medical image analysis. I have an M.S. from Chonnam National University and research experience at BIEL Lab / Chonnam National University Hwasun Hospital. My current bioinformatics work includes building reproducible Nextflow workflows for Black Soldier Fly genomic diversity and inbreeding monitoring.</p><div class="grid3 research-pillars"><div class="pillar pillar-enhanced" data-target="imaging-showcase"><span class="num">01 / IMAGING</span><h3>Biomedical Optical Imaging</h3><p>OCT, speckle-variance analysis and coagulation monitoring.</p><span aria-hidden="true" class="pillar-arrow">↗</span><a class="v6-pillar-link" href="#imaging-showcase">Explore research ↓</a></div><div class="pillar pillar-enhanced" data-target="medical-showcase"><span class="num">02 / AI</span><h3>Medical Image Analysis</h3><p>Segmentation, detection and multimodal CT, MRI and PET data.</p><span aria-hidden="true" class="pillar-arrow">↗</span><a class="v6-pillar-link" href="#medical-showcase">Explore research ↓</a></div><div class="pillar pillar-enhanced" data-target="genomics-showcase"><span class="num">03 / GENOMICS</span><h3>Computational Genomics</h3><p>Variant analysis, genetic diversity and reproducible workflows.</p><span aria-hidden="true" class="pillar-arrow">↗</span><a class="v6-pillar-link" href="#genomics-showcase">Explore research ↓</a></div></div><div class="research-showcases">
-<section class="focus-panel v8-section" id="imaging-showcase"><div class="focus-heading"><div><span class="kicker">01 / IMAGING</span><h2>Biomedical Optical Imaging</h2><p>Speckle-variance OCT, image synthesis, and computational analysis of coagulation dynamics.</p></div><a class="focus-link" href="research/svoct.html">Explore imaging research ↗</a></div>
-<div class="highlight-list v8-card-grid">
-<article class="highlight-card v8-card"><a class="highlight-visual" href="assets/figures/gan-svoct-original-poster.png" rel="noopener" target="_blank" title="Open original research figure"><img alt="Original research poster showing GAN-based coagulation monitoring using SvOCT" loading="lazy" src="assets/figures/v10-gan-svoct.png"/></a><div class="highlight-main"><span class="index-pill">01</span><h3>GAN-Based Blood Coagulation Monitoring</h3><div class="tag-row"><span>Research poster</span><span>SvOCT</span><span>Pix2Pix</span><span>CycleGAN</span><span>AttentionGAN</span></div><p>GAN-based synthesis of speckle-variance OCT images, with experimental acquisition, image-to-image translation, and quantitative image-quality assessment.</p><div class="metrics"><div><small>Average SSIM</small><strong>0.7152</strong></div><div><small>Average UQI</small><strong>0.8863</strong></div></div><div class="highlight-actions"><a class="btn primary" href="research/svoct.html">View project ↗</a><a class="btn" href="assets/figures/gan-svoct-original-poster.png" rel="noopener" target="_blank">View poster ↗</a></div></div></article>
-<article class="highlight-card v8-card"><a class="highlight-visual" href="assets/figures/research-page-4.png" rel="noopener" target="_blank" title="Open original research figure"><img alt="Original coagulation observation research poster preview" loading="lazy" src="assets/figures/v10-oct-coagulation.png"/></a><div class="highlight-main"><span class="index-pill">02</span><h3>Deep Learning for Coagulation Observation</h3><div class="tag-row"><span>Conference poster</span><span>OCT</span><span>Image synthesis</span><span>Correlation analysis</span></div><p>Comparison of OCT image synthesis approaches, including processing workflows, generated images, correlation measurements, and SSIM/UQI evaluation.</p><div class="highlight-actions"><a class="btn primary" href="research/svoct.html">View research ↗</a></div></div></article>
-</div></section>
-<section class="focus-panel focus-compact v8-section" id="medical-showcase"><div class="focus-heading"><div><span class="kicker">02 / AI</span><h2>CT/CBCT-Based Radiotherapy &amp; Medical Image Analysis</h2><p>Longitudinal cone-beam CT, anatomical segmentation, image registration and dose-aware evaluation.</p></div><a class="focus-link" href="research/radiotherapy.html">Explore CBCT research ↗</a></div><div class="highlight-list v8-card-grid"><article class="highlight-card v8-card"><a class="highlight-visual" href="assets/figures/ct-cbct-workflow.png" rel="noopener" target="_blank" title="Open original research figure"><img alt="CT and CBCT radiotherapy workflow diagram" loading="lazy" src="assets/figures/v10-ct-cbct.png"/></a><div class="highlight-main"><span class="index-pill">01</span><h3>CT/CBCT Image Analysis for Adaptive Radiotherapy</h3><div class="tag-row"><span>CBCT</span><span>Medical image segmentation</span><span>Image registration</span><span>Radiotherapy</span></div><p>Research framework for comparing planning CT with longitudinal CBCT scans, tracking anatomical changes, and evaluating tumor and organ-at-risk contours across treatment fractions.</p><p class="v6-note">Research direction and methodology; no clinical validation is implied.</p><div class="highlight-actions"><a class="btn primary" href="research/radiotherapy.html">View project ↗</a><a class="btn" href="assets/figures/ct-cbct-workflow.png" rel="noopener" target="_blank">View workflow ↗</a></div></div></article><article class="highlight-card v8-card"><a class="highlight-visual" href="assets/figures/research-page-6.png" rel="noopener" target="_blank" title="Open original research figure"><img alt="Original bone tumor PET/CT research image" loading="lazy" src="assets/figures/v10-bone-tumor.png"/></a><div class="highlight-main"><span class="index-pill">02</span><h3>Bone Tumor Detection and Segmentation</h3><div class="tag-row"><span>PET/CT</span><span>Bone segmentation</span><span>SUV analysis</span></div><p>Bone lesion localization, segmentation methodology, and quantitative imaging evaluation.</p><div class="highlight-actions"><a class="btn primary" href="research/bone.html">View research ↗</a></div></div></article></div><div class="v6-secondary"><a href="research/bone.html">Bone Tumor Segmentation ↗</a><a href="research/liver.html">Liver Tumor Imaging ↗</a></div></section>
-<section class="focus-panel focus-compact v8-section v8-genomics" id="genomics-showcase"><div class="focus-heading"><div><span class="kicker">03 / GENOMICS</span><h2>Black Soldier Fly Genomic Diversity Pipeline</h2><p>A reproducible Nextflow workflow for variant analysis, population structure, genetic diversity and inbreeding monitoring.</p></div><a class="focus-link" href="https://github.com/vannguyen3007/bsf-genomic-diversity-pipeline" rel="noopener" target="_blank">View GitHub repository ↗</a></div><div class="highlight-list v8-card-grid"><article class="highlight-card v8-card"><a class="highlight-visual" href="assets/figures/bsf-pipeline-infographic.png" rel="noopener" target="_blank" title="Open original research figure"><img alt="Black Soldier Fly genomics pipeline infographic" loading="lazy" src="assets/figures/v10-bsf-genomics.png"/></a><div class="highlight-main"><span class="index-pill">01</span><h3>BSF Genomic Diversity &amp; Inbreeding Monitoring</h3><div class="tag-row"><span>Nextflow</span><span>Variant calling</span><span>PCA</span><span>Population genetics</span><span>Reproducibility</span></div><p>Modular analysis of sequencing data, quality control, genomic variation, relatedness, population structure and runs of homozygosity.</p><p class="v6-note">Infographic illustrates the pipeline; simulated example charts are not experimental findings.</p><div class="highlight-actions"><a class="btn primary" href="https://github.com/vannguyen3007/bsf-genomic-diversity-pipeline" rel="noopener" target="_blank">View GitHub ↗</a><a class="btn" href="research/genomics.html">Project details ↗</a></div></div></article></div></section></div></div></section><section class="section alt" id="research"><div class="container"><span class="kicker">02 / Research</span><h2>Explore all research projects</h2><p class="intro">Research projects documented in my experience portfolio, alongside an emerging genomics initiative.</p><div class="projects"><a class="project" href="research/svoct.html"><img alt="Research material from Van Nguyen portfolio" src="assets/figures/gan-svoct-original-poster.png"/><div class="content"><span class="tag">Biomedical optical imaging · Deep learning</span><h3>Coagulation Monitoring with Speckle-Variance OCT</h3><p>Exploring computational analysis of speckle-variance optical coherence tomography for coagulation monitoring.</p><span class="arrow">Explore project ↗</span></div></a><a class="project" href="research/bone.html"><img alt="Research material from Van Nguyen portfolio" src="assets/figures/research-page-6.png"/><div class="content"><span class="tag">Medical imaging · Segmentation</span><h3>Bone Lesion &amp; Tumor Detection</h3><p>Region-based and deep learning approaches for bone lesion and metastatic tumor analysis.</p><span class="arrow">Explore project ↗</span></div></a><a class="project" href="research/liver.html"><img alt="Research material from Van Nguyen portfolio" src="assets/figures/research-page-7.png"/><div class="content"><span class="tag">CT · MRI · PET · Deep learning</span><h3>Liver Tumor Detection &amp; Multimodal Imaging</h3><p>Investigating multimodal medical imaging and computational approaches for liver tumor identification.</p><span class="arrow">Explore project ↗</span></div></a><a class="project" href="research/genomics.html"><div style="height:220px;background:linear-gradient(135deg,#10343e,#236b70);display:grid;place-items:center;color:#b8ded0;font-size:95px">⌁</div><div class="content"><span class="tag">Bioinformatics · Population genetics</span><h3>BSF Genomic Diversity Pipeline</h3><p>Nextflow-based population genetics and genomic diversity monitoring. Source code available on GitHub.</p><span class="arrow">Explore project ↗</span></div></a></div></div></section><section class="section" id="experience"><div class="container"><span class="kicker">03 / Background</span><h2>Research &amp; professional experience</h2><div class="experience-grid"><div class="experience-card"><span class="tag">2026 – Present</span><h3>Bioinformatics Research Intern · Entobel</h3><p>Nextflow-based genomic sequencing workflows, diversity assessment and reproducible reporting for Black Soldier Fly populations.</p></div><div class="experience-card"><span class="tag">2025 – 2026</span><h3>Research Assistant · AI VIET NAM</h3><p>Research methods and semi-supervised deep learning for histopathology image segmentation.</p></div><div class="experience-card"><span class="tag">2021 – 2023</span><h3>Research Assistant · BIEL Lab</h3><p>Medical imaging research at Chonnam National University Hwasun Hospital, including optical imaging and tumor analysis.</p></div><div class="experience-card"><span class="tag">2025 – Present</span><h3>Research Collaboration · Causal Narrative</h3><p>Literature documentation, data collection and feature preparation for information systems research.</p></div></div><p class="smallnote">Selected highlights from the uploaded CV. See the complete CV for further experience, education and skills.</p></div></section><section class="section" id="presentations"><div class="container split"><div><span class="kicker">03 / Scientific communication</span><h2>Posters &amp; presentations</h2><p class="intro">Research posters on coagulation monitoring using optical coherence tomography and deep learning are included in my research-experience portfolio. Full citation details and publication links will be added after verification.</p><p class="smallnote">Poster preview from page 4 of the supplied research experience PDF.</p></div><img alt="Two research poster previews from the supplied portfolio" loading="lazy" src="assets/figures/research-page-4.png"/></div></section><section class="section alt" id="life"><div class="container split"><img alt="Laboratory and campus life photographs from the supplied portfolio" loading="lazy" src="assets/figures/research-page-8.png"/><div><span class="kicker">04 / Beyond the lab</span><h2>Research life</h2><p class="intro">I enjoy reading, sketching and documenting moments from campus and laboratory life. This space brings together the scientific and human sides of research.</p><p class="smallnote">Photographs from page 8 of my research-experience portfolio.</p></div></div></section><section class="section" id="contact"><div class="container"><span class="kicker">05 / Connect</span><h2>Let's connect through research.</h2><p class="intro">Interested in biomedical imaging, deep learning, computational genomics or collaborative research?</p><div class="links"><a href="https://github.com/vannguyen3007" rel="noopener" target="_blank">GitHub ↗</a><a href="https://github.com/vannguyen3007/bsf-genomic-diversity-pipeline" rel="noopener" target="_blank">BSF pipeline repository ↗</a><a href="https://medium.com/@vannguyen-8073" rel="noopener" target="_blank">Medium ↗</a><a href="cv/Van_Nguyen_CV.pdf" rel="noopener" target="_blank">Download CV ↗</a><a href="mailto:vannguyen300793@gmail.com">Email ↗</a></div><p class="smallnote">LinkedIn: please provide your public profile URL (the supplied /notifications/ URL is private to your account).</p><p class="smallnote">Add your preferred professional email, CV, ORCID and Scholar profile when ready.</p></div></section><footer class="footer"><div class="container"><span>© Van Nguyen · Computational Biomedical Research</span><span><a href="https://github.com/vannguyen3007" rel="noopener" target="_blank">GitHub ↗</a></span><a href="https://medium.com/@vannguyen-8073" rel="noopener" target="_blank">Medium ↗</a></div></footer></body></html>
+<!-- ===== HEADER (same on every page; project pages use ../ paths) ===== -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Van Nguyen</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#research">Research</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+      <a href="cv/Van_Nguyen_CV.pdf" target="_blank" rel="noopener">CV</a>
+    </nav>
+    <div style="display:flex;gap:8px">
+      <button class="icon-btn" data-theme-toggle aria-label="Switch theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" data-menu-toggle aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <canvas id="isodose" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <h1>Van Nguyen</h1>
+    <p class="lede">I build mathematical and deep learning methods for medical imaging, adaptive radiotherapy and genomics, with a focus on quantifying how much we can trust a model's output.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="#research">See my research</a>
+      <a class="btn" href="cv/Van_Nguyen_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+      <a class="btn" href="mailto:vannguyen300793@gmail.com">Email me</a>
+    </div>
+    <p class="now"><strong>Now:</strong> starting an M.S. in Applied Mathematics at Illinois Institute of Technology (Fall 2026) and working on CBCT-guided adaptive radiotherapy for rectal cancer.</p>
+  </div>
+  <div class="hero-caption" aria-hidden="true"><span class="ramp"></span> Isodose-style level sets. Move your pointer to add dose.</div>
+</section>
+
+<!-- ===== NEWS (newest first; add a new <li> at the top) ===== -->
+<section class="section" id="news">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Latest</h2>
+      <p>What I've been working on recently.</p>
+    </div>
+    <ol class="news">
+      <li><time>Fall 2026</time><p>Starting an M.S. in Applied Mathematics at <a href="https://www.iit.edu" target="_blank" rel="noopener">Illinois Institute of Technology</a>, admitted with a merit scholarship.</p></li>
+      <li><time>2026</time><p>Manuscript <em>“Closed-form sample size calculation for estimating perturbation directions in single-cell screens”</em> is under review at <em>Biostatistics</em>.</p></li>
+      <li><time>Sep 2026</time><p>Finished a bioinformatics internship at <a href="https://entobel.com" target="_blank" rel="noopener">Entobel</a>, Singapore, building a Nextflow pipeline for Black Soldier Fly genomic diversity monitoring.</p></li>
+      <li><time>Mar 2026</time><p>Began a collaboration on CBCT-guided adaptive radiotherapy for rectal cancer with Dr. Duong Thanh Tai and Dr. Dat Tran.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== RESEARCH INTERESTS (from the CV, grouped into four areas) ===== -->
+<section class="section" id="interests">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Research interests</h2>
+      <p>The questions I care about sit where mathematics meets medicine and biology.</p>
+    </div>
+    <div class="interests">
+      <div class="interest" style="--mark: var(--iso-6)"><h3>Mathematics and statistics</h3><p>Applied mathematics and statistics, biostatistics, optimal transport, uncertainty quantification, quantitative finance</p></div>
+      <div class="interest" style="--mark: var(--iso-5)"><h3>Medical imaging</h3><p>AI-driven medical imaging, adaptive radiotherapy, precision medicine</p></div>
+      <div class="interest" style="--mark: var(--iso-3)"><h3>Genomics and biology</h3><p>Statistical genomics, single-cell perturbation analysis, bioinformatics, sequence alignment, genomics and proteomics analysis, systems biology</p></div>
+      <div class="interest" style="--mark: var(--iso-2)"><h3>AI for science</h3><p>Large language models in biomedical research</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESEARCH =====
+     To add a project: copy one <article class="project"> block, change the
+     link, image, text and data-topics. Topics must match a filter button. -->
+<section class="section" id="research">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Research</h2>
+      <p>Six projects across radiotherapy, statistics, genomics and medical imaging. Filter by topic, or open a project for the full write-up.</p>
+    </div>
+
+    <div class="filters" role="group" aria-label="Filter projects by topic">
+      <button data-filter="all" aria-pressed="true">All</button>
+      <button data-filter="imaging" aria-pressed="false">Medical imaging</button>
+      <button data-filter="stats" aria-pressed="false">Statistics</button>
+      <button data-filter="genomics" aria-pressed="false">Genomics</button>
+      <button data-filter="optics" aria-pressed="false">Optical imaging</button>
+    </div>
+
+    <!-- Featured (current) project -->
+    <article class="feature" data-topics="imaging stats">
+      <div>
+        <span class="status is-active">In progress, since Mar 2026</span>
+        <h3>CBCT-guided adaptive radiotherapy for rectal cancer</h3>
+        <p class="muted">Daily cone-beam CT shows how the pelvis changes between treatments: rectal gas comes and goes, the bladder fills. I'm developing methods that register and contour these scans reliably, and say when they shouldn't be trusted.</p>
+        <ul class="directions">
+          <li><strong>Gas-aware deformable registration</strong><span>Diffeomorphic deformation plus an unbalanced optimal transport term, so gas and bladder changes can appear or disappear.</span></li>
+          <li><strong>Risk-controlled segmentation</strong><span>Conformal risk control gives contour bands with guaranteed coverage and flags cases for physician review.</span></li>
+        </ul>
+        <a class="btn btn-primary" href="research/radiotherapy.html">Read the project</a>
+      </div>
+      <a class="plate" href="assets/figures/ct-cbct-workflow.png" target="_blank" rel="noopener" aria-label="Open the CT/CBCT workflow figure at full size">
+        <img src="assets/figures/thumbs/ct-cbct-workflow.webp" alt="Workflow diagram: RTSTRUCT contours, CT/CBCT segmentation and RTDOSE are mapped to one dose grid, then compared with dose-volume histograms and tracked across treatment fractions." width="1100" height="981" loading="lazy">
+      </a>
+    </article>
+
+    <div class="projects">
+      <article class="project" data-topics="stats genomics">
+        <div class="equation" aria-hidden="true">
+          <div>Var(θ̂) ≈ ∇g(μ)<sup>⊤</sup> Σ ∇g(μ) / n</div>
+          <small>Delta-method variance of an estimated perturbation direction</small>
+        </div>
+        <div class="meta"><span class="status">Under review, <em>Biostatistics</em></span></div>
+        <h3><a href="research/perturbation.html">Sample size for single-cell perturbation screens</a></h3>
+        <p>Closed-form formulas for how many cells you need to estimate a drug's perturbation direction to a given precision.</p>
+        <ul class="tags"><li>Delta method</li><li>Asymptotic variance</li><li>scRNA-seq</li></ul>
+      </article>
+
+      <article class="project" data-topics="genomics">
+        <a class="plate" href="assets/figures/bsf-pipeline-infographic.png" target="_blank" rel="noopener" aria-label="Open pipeline infographic at full size">
+          <img src="assets/figures/thumbs/bsf-pipeline-infographic.webp" alt="Infographic of the Black Soldier Fly genomics pipeline from sequencing reads to diversity and inbreeding reports." loading="lazy">
+        </a>
+        <div class="meta"><span class="status">Completed, 2026</span></div>
+        <h3><a href="research/genomics.html">Black Soldier Fly genomic diversity pipeline</a></h3>
+        <p>A reproducible Nextflow workflow for variant calling, population structure and inbreeding monitoring in breeding populations.</p>
+        <ul class="tags"><li>Nextflow</li><li>Variant calling</li><li>Population genetics</li></ul>
+      </article>
+
+      <article class="project" data-topics="optics imaging">
+        <a class="plate" href="assets/figures/gan-svoct-original-poster.png" target="_blank" rel="noopener" aria-label="Open poster at full size">
+          <img src="assets/figures/thumbs/gan-svoct-original-poster.webp" alt="Research poster on GAN-based synthesis of speckle-variance OCT images for blood coagulation monitoring." loading="lazy">
+        </a>
+        <div class="meta"><span class="status">2021–2023, BIEL Lab</span></div>
+        <h3><a href="research/svoct.html">GAN-based coagulation monitoring with speckle-variance OCT</a></h3>
+        <p>Image-to-image translation (Pix2Pix, CycleGAN, AttentionGAN) to synthesize SvOCT images. Average SSIM 0.7152, UQI 0.8863.</p>
+        <ul class="tags"><li>OCT</li><li>GANs</li><li>Image synthesis</li></ul>
+      </article>
+
+      <article class="project" data-topics="imaging">
+        <a class="plate" href="assets/figures/research-page-6.png" target="_blank" rel="noopener" aria-label="Open bone imaging figure at full size">
+          <img src="assets/figures/thumbs/research-page-6.webp" alt="Bone tumor detection workflow: CT windowing, bone masking, PET SUV thresholding and watershed lesion localization." loading="lazy">
+        </a>
+        <div class="meta"><span class="status">2021–2023, BIEL Lab</span></div>
+        <h3><a href="research/bone.html">Bone lesion and metastatic tumor detection</a></h3>
+        <p>Thresholding, region growing, watershed, U-Net and Mask R-CNN on CT and PET to localize bone metastases and quantify SUV.</p>
+        <ul class="tags"><li>PET/CT</li><li>Segmentation</li><li>SUV analysis</li></ul>
+      </article>
+
+      <article class="project" data-topics="imaging">
+        <a class="plate" href="assets/figures/research-page-7.png" target="_blank" rel="noopener" aria-label="Open liver imaging figure at full size">
+          <img src="assets/figures/thumbs/research-page-7.webp" alt="Liver tumor imaging research slide comparing CT, MRI and PET." loading="lazy">
+        </a>
+        <div class="meta"><span class="status">2021–2023, BIEL Lab</span></div>
+        <h3><a href="research/liver.html">Liver tumor detection with multimodal imaging</a></h3>
+        <p>CT, MRI, ¹⁸F-FDG PET and ¹¹C-acetate PET combined for detecting and segmenting liver lesions.</p>
+        <ul class="tags"><li>CT</li><li>MRI</li><li>PET</li><li>Detection</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXPERIENCE (same order and wording as the CV) =====
+     Each entry: date, title, role/location, one meta line, and an
+     expandable <details> list with the CV bullet points. -->
+<section class="section" id="experience">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Work and research experience</h2>
+      <p>The same entries as my <a href="cv/Van_Nguyen_CV.pdf" target="_blank" rel="noopener">CV</a>. Open any entry to see the details.</p>
+    </div>
+    <ol class="timeline">
+      <li><time>Feb 2026 – Oct 2026</time><div>
+        <h3>Research Collaboration: Single-Cell Perturbation Screens</h3>
+        <p class="org">Statistical Methodology Research</p>
+        <p class="meta-line">Manuscript: <em>“Closed-form sample size calculation for estimating perturbation directions in single-cell screens”</em> (<em>Biostatistics</em>, under review). <a href="research/perturbation.html">Project page</a></p>
+        <details>
+          <summary><span class="when-closed">Show details</span><span class="when-open">Hide details</span></summary>
+          <ul>
+            <li><strong>Statistical Methodology:</strong> Developed a theoretical framework using the Multivariate Delta Method, Taylor Expansion, and Asymptotic Variance to quantify uncertainty in drug-induced perturbation direction estimates.</li>
+            <li><strong>Sample Size Estimation:</strong> Derived closed-form sample size approximations based on Covariance Propagation, Signal-to-Noise Ratio, and Directional Estimation Precision.</li>
+            <li><strong>Drug-Response Analysis:</strong> Investigated the effects of biological and technical noise on perturbation direction estimation and drug-response signals in single-cell screening experiments.</li>
+          </ul>
+        </details></div></li>
+      <li><time>Mar 2026 – Present</time><div>
+        <h3>Research Collaboration: CBCT-Guided Adaptive Radiotherapy</h3>
+        <p class="org">CBCT for Rectal Cancer Adaptive Treatment · USA</p>
+        <p class="meta-line">Collaborators: <a href="https://sites.google.com/view/drduongthanhtai/" target="_blank" rel="noopener">Dr. Duong Thanh Tai</a> (Spencer Hospital, USA); Dr. Dat Tran (Louisiana State University, USA). <a href="research/radiotherapy.html">Project page</a></p>
+        <details>
+          <summary><span class="when-closed">Show details</span><span class="when-open">Hide details</span></summary>
+          <ul>
+            <li><strong>Gas-Aware Deformable Registration:</strong> Formulating CBCT–CT registration as a diffeomorphic deformation coupled with a Wasserstein–Fisher–Rao (unbalanced optimal transport) source term to model rectal gas and bladder-filling changes, benchmarked against VoxelMorph and TransMorph on contour propagation and dose accumulation.</li>
+            <li><strong>Risk-Controlled Segmentation:</strong> Wrapping Swin UNETR and Bayesian Deep Ensembles in Conformal Risk Control with Mondrian and Weighted Conformal Prediction, producing contour bands with finite-sample guarantees on missed CTV volume to flag cases for radiation oncologist review.</li>
+            <li><strong>Counterfactual Dosimetry:</strong> Using Neural Dose Surrogates, Bilevel Optimization, and Differentiable DVH Loss to quantify the dosimetric impact of residual segmentation errors.</li>
+            <li><strong>Data and Validation:</strong> Exploring SynthRAD2025, COBRA2026, and institutional rectal CBCT/CT datasets with expert contours and radiotherapy dose records for geometric and dosimetric evaluation, subject to data availability.</li>
+          </ul>
+        </details></div></li>
+      <li><time>Jun 2026 – Sep 2026</time><div>
+        <h3>Bioinformatics Research Intern: <a href="https://entobel.com" target="_blank" rel="noopener">Entobel</a></h3>
+        <p class="org">Researcher Intern · Singapore</p>
+        <p class="meta-line">Project: <em>Development of a Nextflow Pipeline and Report Template for BSF Genomic Diversity and Inbreeding Monitoring</em>. <a href="research/genomics.html">Project page</a></p>
+        <details>
+          <summary><span class="when-closed">Show details</span><span class="when-open">Hide details</span></summary>
+          <ul>
+            <li><strong>Pipeline Development:</strong> Designed and implemented a scalable Nextflow-based bioinformatics workflow for automated processing and analysis of Black Soldier Fly (BSF) genomic sequencing data.</li>
+            <li><strong>Genomic Diversity and Inbreeding Analysis:</strong> Developed analytical modules for genomic diversity assessment, population structure evaluation, and inbreeding coefficient monitoring across BSF breeding populations.</li>
+            <li><strong>Workflow Automation and Reporting:</strong> Integrated quality control, variant calling, statistical summarization, and automated report generation into a reproducible computational framework for genomic monitoring.</li>
+            <li><strong>Industrial Bioinformatics Collaboration:</strong> Collaborated with research and technical teams to optimize computational reproducibility and support data-driven breeding strategy decisions for sustainable industrial insect production.</li>
+          </ul>
+        </details></div></li>
+      <li><time>Jul 2025 – Dec 2025</time><div>
+        <h3>Research Assistant Project: “Causal Narrative in Information Systems Research”</h3>
+        <p class="org">Researcher Collaboration · USA</p>
+        <p class="meta-line">With <a href="https://sites.google.com/view/minhn/" target="_blank" rel="noopener">Minh Nguyen</a> (Florida Atlantic University) and <a href="https://mikenguyen.netlify.app/about/" target="_blank" rel="noopener">Mike Nguyen</a> (University of Southern California)</p>
+        <details>
+          <summary><span class="when-closed">Show details</span><span class="when-open">Hide details</span></summary>
+          <ul>
+            <li><strong>Research Material Documentation:</strong> Collected and organized research documents and papers for literature review; managed references and maintained clear documentation to support the project workflow.</li>
+            <li><strong>Data Collection Support:</strong> Gathered causal narratives from surveys, interviews, and online platforms; logged sources and key metadata to ensure traceability and research readiness.</li>
+            <li><strong>Feature Preparation:</strong> Transformed raw narratives into structured datasets by deriving interpretable indicators; documented workflows and produced summaries to support analysis and manuscript development.</li>
+          </ul>
+        </details></div></li>
+      <li><time>2021 – 2023</time><div>
+        <h3>Department of Artificial Intelligence Convergence, Chonnam National University</h3>
+        <p class="org">Research Assistant – BIEL Lab, Chonnam National University Hwasun Hospital · South Korea</p>
+        <p class="meta-line">Research portfolio: <a href="https://docs.google.com/presentation/d/1il64xRwhcfg3HEtFBTmA8xHugnTxbl1j/edit?usp=sharing" target="_blank" rel="noopener">Slides</a>, <a href="https://drive.google.com/file/d/1CHwgnTUu1biOdtJnC6Mwc9GXCG59Xieb/view?usp=share_link" target="_blank" rel="noopener">PDF</a></p>
+        <details>
+          <summary><span class="when-closed">Show details</span><span class="when-open">Hide details</span></summary>
+          <ul>
+            <li><strong>AI-Driven Medical Imaging:</strong> Leveraged deep learning models and computer vision techniques to detect and localize tumors in critical anatomical regions from medical imaging data.</li>
+            <li><strong>Research Projects:</strong> <a href="research/liver.html">Tumor detection in liver imaging</a> (CT, MRI, ¹⁸F-FDG PET, ¹¹C-ACT PET); <a href="research/bone.html">tumor detection in bone imaging</a> (thresholding, region growing, U-Net, Mask R-CNN); multimodal tumor characterization (PET, CT, MRI); <a href="research/svoct.html">optical coherence tomography</a> (speckle variance and GANs for tissue coagulation).</li>
+            <li><strong>Collaboration with Healthcare Professionals:</strong> Worked with physicians and research teams to understand anatomical knowledge and clinical challenges in medical imaging.</li>
+            <li><strong>Literature Review:</strong> Reviewed deep learning applications in medical imaging and biomedical research.</li>
+          </ul>
+        </details></div></li>
+      <li><time>2024 – Present</time><div>
+        <h3>PropellerAds</h3>
+        <p class="org">Machine Learning Engineering · Singapore</p></div></li>
+      <li><time>Earlier</time><div>
+        <h3>Fintech Company</h3>
+        <p class="org">Machine Learning Engineering and Data Mining · Vietnam</p>
+        <details>
+          <summary><span class="when-closed">Show details</span><span class="when-open">Hide details</span></summary>
+          <ul>
+            <li><strong>Developing Credit Scoring Models:</strong> Utilized regression analysis and machine learning algorithms for credit scoring, risk assessment, and financial forecasting.</li>
+            <li><strong>Risk Reduction in Credit Portfolio:</strong> Optimized credit scoring models through feature selection and predictive modeling to support credit risk management.</li>
+          </ul>
+        </details></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== SKILLS (grouped as in the CV) ===== -->
+<section class="section" id="skills">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Skills</h2>
+      <p>Languages, tools and methods I use in research and engineering work.</p>
+    </div>
+    <div class="skills">
+      <div class="skill-group"><h3>Programming languages</h3><ul class="tags"><li>Python</li><li>LaTeX</li><li>R</li><li>MATLAB</li><li>HTML</li><li>CSS</li><li>C++</li></ul></div>
+      <div class="skill-group"><h3>Tools and frameworks</h3><ul class="tags"><li>SQL</li><li>Airflow</li><li>PySpark</li><li>AWS Lambda</li><li>PyTorch</li><li>Git</li><li>Hugging Face</li></ul></div>
+      <div class="skill-group"><h3>Software</h3><ul class="tags"><li>3D Slicer</li><li>SolidWorks</li><li>ITK-SNAP</li><li>MONAI</li></ul></div>
+      <div class="skill-group"><h3>Sequence alignment</h3><ul class="tags"><li>BLAST</li><li>Bowtie2</li><li>Minimap2</li></ul></div>
+      <div class="skill-group"><h3>Transcriptomics (RNA-seq, scRNA-seq)</h3><ul class="tags"><li>DESeq2</li><li>Monocle</li><li>miRDeep</li><li>miRBase</li></ul></div>
+      <div class="skill-group"><h3>Bioinformatics pipelines</h3><ul class="tags"><li>Nextflow</li><li>Genomic diversity analysis</li><li>Variant calling</li><li>Population structure analysis</li><li>Inbreeding monitoring</li></ul></div>
+      <div class="skill-group"><h3>Statistical methodology</h3><ul class="tags"><li>Multivariate delta method</li><li>Taylor expansion</li><li>Asymptotic variance</li><li>Covariance estimation</li><li>Sample size calculation</li><li>Statistical power analysis</li><li>Directional estimation</li></ul></div>
+      <div class="skill-group"><h3>Medical AI</h3><ul class="tags"><li>Swin UNETR</li><li>Bayesian deep ensembles</li><li>Conformal risk control</li><li>Mondrian and weighted conformal prediction</li><li>Diffeomorphic registration</li><li>Unbalanced optimal transport</li><li>Neural dose surrogates</li><li>Differentiable DVH loss</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EDUCATION, SCHOLARSHIPS, CONFERENCES ===== -->
+<section class="section" id="education">
+  <div class="wrap">
+    <div class="section-head"><h2>Education, awards and conferences</h2></div>
+    <div class="columns">
+      <div>
+        <h3>Education and courses</h3>
+        <ul class="plain-list">
+          <li>Chonnam National University, Department of AI Convergence<span>Master of Science, 2021–2023, Gwangju, South Korea</span></li>
+          <li>Banking Academy of Vietnam, Faculty of Finance<span>Bachelor of Arts, Hanoi, Vietnam</span></li>
+          <li>Johns Hopkins University, Department of Mathematics<span>Real Analysis (MATH 110.405), synchronous course</span></li>
+          <li><a href="https://depocen.org/en/cased-intro/" target="_blank" rel="noopener">CASED Center</a><span>Optimization, offline course</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Scholarships and awards</h3>
+        <ul class="plain-list">
+          <li>Scholarship awardee: <a href="https://www.iit.edu" target="_blank" rel="noopener">Illinois Institute of Technology</a><span>M.S. Applied Mathematics, admitted with merit scholarship, Fall 2026 (<a href="https://drive.google.com/file/d/1VCt526qvBpE7OSZRgID-w9DDtick_YuT/view?usp=sharing" target="_blank" rel="noopener">proof</a>)</span></li>
+          <li>Graduate excellence<span>Selected for admission based on quantitative, computational and interdisciplinary research achievements.</span></li>
+          <li>Merit recognition<span>Awarded merit-based funding for academic excellence and research potential.</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Conferences attended</h3>
+        <ul class="plain-list">
+          <li><a href="https://drive.google.com/file/d/1wRw5Jvd4H7Z7yaCwf6Fahqw2ghIo4lbF/view" target="_blank" rel="noopener">Coagulation observation monitoring using deep learning speckle variance optical coherence tomography</a><span>Oral presentation, Annual Meeting of ARCCNM-KSNM, South Korea</span></li>
+          <li><a href="https://drive.google.com/file/d/1g0dbCnCMy5H1PakHXcQETysFvpnIYTBQ/view?usp=sharing" target="_blank" rel="noopener">Feasibility study to utilize GAN deep learning in blood coagulation monitoring with speckle variance optical coherence tomography</a><span>Poster, Korean Society of Medical &amp; Biological Engineering, South Korea</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESEARCH LIFE ===== -->
+<section class="section" id="life">
+  <div class="wrap split">
+    <a class="plate" href="assets/figures/research-page-8.png" target="_blank" rel="noopener" aria-label="Open photo collage at full size">
+      <img src="assets/figures/thumbs/research-page-8.webp" alt="Photo collage of the lab bench, campus trees and the library corner at Chonnam National University." loading="lazy">
+    </a>
+    <div>
+      <h2>Outside the lab</h2>
+      <p class="muted" style="margin-top:16px">I enjoy reading, sketching and capturing moments from campus and lab life. These are from my time at Chonnam National University.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <h2>Interested in working together?</h2>
+    <p class="muted">I'm open to research collaborations in medical imaging, radiotherapy, statistical methodology and computational genomics.</p>
+    <div class="contact-links">
+      <a class="btn btn-primary" href="mailto:vannguyen300793@gmail.com">vannguyen300793@gmail.com</a>
+      <a class="btn" href="https://vannguyen3007.github.io">vannguyen3007.github.io</a>
+      <a class="btn" href="https://github.com/vannguyen3007" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/van-nguyen-b05455b2/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://medium.com/@vannguyen-8073" target="_blank" rel="noopener">Medium</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Van Nguyen &nbsp; <a href="https://vannguyen3007.github.io">vannguyen3007.github.io</a></span>
+    <span><a href="https://github.com/vannguyen3007" target="_blank" rel="noopener">GitHub</a> &nbsp; <a href="https://www.linkedin.com/in/van-nguyen-b05455b2/" target="_blank" rel="noopener">LinkedIn</a> &nbsp; <a href="https://medium.com/@vannguyen-8073" target="_blank" rel="noopener">Medium</a></span>
+  </div>
+</footer>
+</body>
+</html>

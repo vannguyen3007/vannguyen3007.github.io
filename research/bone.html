@@ -1,2 +1,92 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Van Nguyen — AI medical imaging, computational biomedical research and bioinformatics."><title>Bone Lesion &amp; Tumor Detection | Van Nguyen</title><link rel="stylesheet" href="../assets/css/style.css">
-<link rel="stylesheet" href="../assets/css/v9-black.css?v=9"></head><body><header class="top"><div class="container nav"><a class="brand" href="../index.html">VAN NGUYEN<span> / RESEARCH</span></a><nav class="navlinks"><a href="../index.html#about">About</a><a href="../index.html#research">Research</a><a href="../index.html#presentations">Presentations</a><a href="../index.html#life">Research Life</a><a href="../index.html#contact">Contact</a></nav></div></header><main class="container detail"><a class="arrow" href="../index.html#research">← All research projects</a><p class="kicker">Research project</p><h1>Bone Lesion & Tumor Detection</h1><p class="lead">Exploring methods for detection and segmentation of lesions in skeletal medical imaging.</p><h2>Research motivation</h2><p>This project examines image-based lesion localization and segmentation methods.</p><h2>Approach & scope</h2><p>The portfolio describes thresholding, region growing, U-Net and Mask R-CNN applied in the context of MRI and PET imaging, including bone metastasis analysis.</p><img src="../assets/figures/research-page-6.png" alt="Source research material for Bone Lesion &amp; Tumor Detection" loading="lazy"><div class="notice">This page summarizes documented research experience or a developing project. Numerical performance claims, publication details and dataset access are not provided without verification.</div><p class="smallnote">Source: Research Experience – Van Nguyen (supplied portfolio). Images reproduced from the original portfolio.</p></main><footer class="footer"><div class="container"><span>© Van Nguyen · Computational Biomedical Research</span><span><a href="https://github.com/vannguyen3007" target="_blank" rel="noopener">GitHub ↗</a></span></div></footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bone lesion and metastatic tumor detection — Van Nguyen</title>
+  <meta name="description" content="Region-based and deep learning segmentation to localize bone metastases on CT and PET.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='13' fill='none' stroke='%232fa6d8' stroke-width='2'/><circle cx='16' cy='16' r='8' fill='none' stroke='%23f0a83c' stroke-width='2'/><circle cx='16' cy='16' r='3' fill='%23e8553f'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ===== HEADER (copy of the home page header with ../ paths) ===== -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Van Nguyen</a>
+    <nav class="nav" aria-label="Main">
+      <a href="../index.html#research" aria-current="page">Research</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#education">Education</a>
+      <a href="../index.html#contact">Contact</a>
+      <a href="../cv/Van_Nguyen_CV.pdf" target="_blank" rel="noopener">CV</a>
+    </nav>
+    <div style="display:flex;gap:8px">
+      <button class="icon-btn" data-theme-toggle aria-label="Switch theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" data-menu-toggle aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <!-- ===== PAGE HEADING: title, one-sentence summary, key facts ===== -->
+  <div class="wrap page-head">
+    <a class="crumb" href="../index.html#research">← All research</a>
+    <h1>Bone lesion and metastatic tumor detection</h1>
+    <p class="lede">Region-based and deep learning segmentation to localize bone metastases on CT and PET.</p>
+    <dl class="facts">
+      <div><dt>Period</dt><dd>2021 – 2023</dd></div>
+      <div><dt>Where</dt><dd>BIEL Lab, Chonnam National University Hwasun Hospital</dd></div>
+      <div><dt>Slides</dt><dd><a href="https://docs.google.com/presentation/d/1FRukv82QTEO3SzvKfSNDCu8mzvEOuZgT/edit" target="_blank" rel="noopener">Google Slides</a></dd></div>
+    </dl>
+  </div>
+
+  <!-- ===== BODY: table of contents on the left, write-up on the right ===== -->
+  <div class="wrap article">
+    <nav class="toc" aria-label="On this page"><ol>
+      <li><a href="#problem">The problem</a></li>
+      <li><a href="#approach">Approach</a></li>
+    </ol></nav>
+    <div class="prose">
+      <h2 id="problem">The problem</h2>
+      <p>Bone is a common site of cancer spread. Finding metastatic lesions early on whole-body scans supports earlier treatment.</p>
+      <h2 id="approach">Approach</h2>
+      <ul>
+        <li>CT windowed to the bone range (HU 600–1000) and masked with morphological closing.</li>
+        <li>¹⁸F-FDG and ¹¹C-acetate PET signal used to compute SUV thresholds inside the bone mask.</li>
+        <li>Watershed segmentation to split lesions into small regions, classified by body region: neck, shoulder, pelvis and spine.</li>
+        <li>U-Net and Mask R-CNN compared with thresholding and region growing; SUV results compared with physicians' readings.</li>
+      </ul>
+      <figure>
+        <a class="plate" href="../assets/figures/research-page-6.png" target="_blank" rel="noopener" aria-label="Open figure at full size">
+          <img src="../assets/figures/thumbs/research-page-6.webp" alt="Bone tumor detection workflow: CT windowing, bone mask, PET SUV and watershed localization." loading="lazy">
+        </a>
+        <figcaption>Processing pipeline and evaluation against physician diagnosis. Click to open full size.</figcaption>
+      </figure>
+      <nav class="next-prev" aria-label="More projects">
+        <a href="svoct.html">← GAN-based coagulation monitoring with speckle-variance OCT</a>
+        <a href="liver.html">Liver tumor detection with multimodal imaging →</a>
+      </nav>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Van Nguyen &nbsp; <a href="https://vannguyen3007.github.io">vannguyen3007.github.io</a></span>
+    <span><a href="https://github.com/vannguyen3007" target="_blank" rel="noopener">GitHub</a> &nbsp; <a href="https://www.linkedin.com/in/van-nguyen-b05455b2/" target="_blank" rel="noopener">LinkedIn</a> &nbsp; <a href="https://medium.com/@vannguyen-8073" target="_blank" rel="noopener">Medium</a></span>
+  </div>
+</footer>
+</body>
+</html>
