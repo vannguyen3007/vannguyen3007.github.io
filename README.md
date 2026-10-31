@@ -77,3 +77,11 @@ GitHub Pages serves the `main` branch root (Settings → Pages).
   drifting Gaussian sources). It pauses when off-screen and shows a still frame
   for visitors who prefer reduced motion. Tune it in `assets/js/main.js`, section 4.
 - Figures sit on light "lightbox" plates so slide-style images read well on the dark background.
+
+## Image credits
+
+- `assets/figures/art/bone-cancer.*` and `assets/figures/art/liver-cancer.*` are built on real CT and MRI
+  volumes from the TotalSegmentator sample data (Wasserthal J. et al., *Radiology: Artificial Intelligence*, 2023;
+  https://github.com/wasserth/TotalSegmentator). Tumors, metastases and tracer uptake are simulated and are
+  not patient findings.
+- `assets/figures/art/perturbation.svg` is an original illustration.

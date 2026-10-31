@@ -344,3 +344,8 @@ img { max-width: 100%; display: block; }
 .skills { display: block; columns: 2; column-gap: 48px; }
 .skill-group { break-inside: avoid; margin-bottom: 28px; }
 @media (max-width: 900px) { .skills { columns: 1; } }
+
+/* Illustrated plates (dark artwork instead of a light figure) */
+.plate.plate-art { background: #0b1117; padding: 0; }
+.plate.plate-art img { border-radius: 0; object-fit: cover; }
+.project .plate.plate-art { padding: 0; }

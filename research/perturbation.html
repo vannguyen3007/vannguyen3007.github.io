@@ -62,6 +62,10 @@
     <div class="prose">
       <h2 id="problem">The problem</h2>
       <p>Single-cell perturbation screens measure how a drug or genetic perturbation shifts a cell's expression profile. Often the quantity of interest is the <em>direction</em> of that shift in a low-dimensional space, not its size. Biological and technical noise make that direction uncertain, and experimenters need to know how many cells to sequence before running the screen.</p>
+            <figure>
+        <div class="plate plate-art"><img src="../assets/figures/art/perturbation.svg" alt="Illustration: Control and drug-treated cells in PCA space, with the estimated direction and confidence cones for 200 and 2,000 cells." width="800" height="450"></div>
+        <figcaption>Illustration. Control and drug-treated cells in PCA space, with the estimated direction and confidence cones for 200 and 2,000 cells.</figcaption>
+      </figure>
       <h2 id="approach">Approach</h2>
       <p>The direction is a smooth function of the mean shift, so its uncertainty can be approximated with the multivariate delta method:</p>
       <div class="math">Var(θ̂) ≈ ∇g(μ)<sup>⊤</sup> Σ ∇g(μ) / n</div>
